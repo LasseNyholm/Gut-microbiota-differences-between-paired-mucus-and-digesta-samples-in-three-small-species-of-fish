@@ -1,4 +1,4 @@
-setwd("~/Dropbox/Lasse/Bioinformatics/Amplicon/Mucus_Content/Github_code")
+setwd("~/Workingdirectory")
 
 library(hilldiv)
 library(nlme)
