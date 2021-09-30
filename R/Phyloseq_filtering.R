@@ -23,10 +23,6 @@ library(fantaxtic)
 
 #Importing and cleaning ASV table
 ASVtable <- read.csv("ASVs.csv", row.names = 1, sep=";")
-ASVtable=ASVtable[!(row.names(ASVtable) %in% c("ASV_2987")),]
-ASVtable=ASVtable[!(row.names(ASVtable) %in% c("ASV_2664")),]
-ASVtable=ASVtable[!(row.names(ASVtable) %in% c("ASV_12592")),]
-
 
 ASVtable <- otu_table(ASVtable, taxa_are_rows = TRUE)
 physeq <- phyloseq(ASVtable)
