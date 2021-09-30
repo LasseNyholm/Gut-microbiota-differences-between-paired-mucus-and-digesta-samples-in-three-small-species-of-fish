@@ -3,9 +3,12 @@
 
 Here follows the pipeline used for processing and statistical analysis of data. The different sub-pipelines are chronological ordered from 1-5.
 
-1. Demultiplexing and prerprocessing
+
+1. Demultiplexing and preprocessing
+- Raw sequences are demultiplexed based on unique tags, filtered and primers are trimmed
 
 2. DADA2
+- Forward and reverse reads 
 
 3. Decontamination, sorting and filtering (Phyloseq_filtering.sh)
 
