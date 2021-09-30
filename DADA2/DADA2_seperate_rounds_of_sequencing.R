@@ -1,5 +1,5 @@
 # Pipeline based on the online DADA2 Pipeline Tutorial (1.16) (Callahan et al. 2016)
-# The first part of the pipeline deals with each sequencing run seperately to infer specific error rates and
+# The first part of the pipeline deals with each sequencing run separately to infer specific error rates and
 # possible overlap when merging forward and reverse reads. 
 
 
@@ -43,6 +43,8 @@ filtRs <- file.path(path, "filtered", paste0(sample.names, "_R_filt.fq.gz"))
 names(filtFs) <- sample.names
 names(filtRs) <- sample.names
 
+# truncLen is specific for each sequencing run depending on the quality of sequences
+
 filtered_out <- filterAndTrim(fnFs, filtFs, fnRs, filtRs, maxN=0, maxEE=c(2,2), truncQ=2, rm.phix=TRUE, truncLen=c(223,223), compress=TRUE, multithread=TRUE, matchIDs = TRUE)
 head(filtered_out)
 ### Store filtered reads as R dataset
@@ -55,7 +57,7 @@ err_reverse_reads <- learnErrors(filtRs, multithread=TRUE)
 #The developers have incorporated a plotting function to visualize how well the estimated error rates match up with the observed:
 #The red line is what is expected based on the quality score, the black line represents the estimate, and the black dots represent the observed.
 #In generally speaking, you want the observed (black dots) to track well with the estimated (black line)
-#In geneal, error rate decreases as Q scores increases
+#In general, error rate decreases as Q scores increases
 #QC filtered reads
 pdf("plotErrors.pdf", height = 15, width = 15)
 plotErrors(err_forward_reads, nominalQ=TRUE)
@@ -98,5 +100,3 @@ seqtab <- makeSequenceTable(merged_amplicons)
 saveRDS(seqtab, file = "~/st1.rds", ascii = FALSE, version = NULL,
         
         compress = TRUE, refhook = NULL)
-
-
