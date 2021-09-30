@@ -1,4 +1,4 @@
-setwd("~/Dropbox/Lasse/Bioinformatics/Amplicon/Mucus_Content")
+setwd("~/Workingdirectory")
 
 library(phyloseq)
 library(ggplot2)
