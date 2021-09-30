@@ -13,7 +13,8 @@ Here follows the pipeline used for processing and statistical analysis of data. 
 3. DADA2 - total data (DADA2_combined_data.R)
 - Datasets are merged, chimeric sequences removed, taxonomy is assigned and a ASV table and taxonomy table are generated.
 
-4. LULU
+4. LULU (LULU.sh)
+- Removal erroneous ASVs
 
 5. Decontamination, sorting and filtering (Phyloseq_filtering.sh)
 
