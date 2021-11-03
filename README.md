@@ -1,7 +1,6 @@
 # Gut microbiota differences between paired mucus and digesta samples in three small species of fish
-16S amplicon pipeline
 
-Here follows the pipeline used for processing and statistical analysis of data. The different sub-pipelines are chronological ordered from 1-7.
+Here follows the pipeline used for processing and statistical analysis of data. The different sub-pipelines are chronological ordered from 1-7. Step 1-5 originally included data that are not a part of the current study, but are important for DADA2 and decontaminations. This extra data can be supplied upon request, but for convenience we supply the reader with decontaminated tables (following decontamination protocol in Phyloseq_filtering.sh) found in the "Data" directory. 
 
 
 1. Demultiplexing and preprocessing
