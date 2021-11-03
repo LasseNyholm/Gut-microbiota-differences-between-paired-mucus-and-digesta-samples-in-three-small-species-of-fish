@@ -13,10 +13,12 @@ Here follows the pipeline used for processing and statistical analysis of data. 
 - Datasets are merged, chimeric sequences removed, taxonomy is assigned and a ASV table and taxonomy table are generated.
 
 4. LULU (4_LULU.sh)
-- Removal erroneous ASVs
+- Removal of erroneous ASVs
 
 5. Decontamination, sorting and filtering (5_Phyloseq_filtering.sh)
+- Decontamination and filtering of data
 
 6. Statistical analysis and visualization (6_Diversity_composition_plots.sh)
+- Statistical analysis and visiulisation 
 
 7. HMSC modelling (7_HMSC.sh)
