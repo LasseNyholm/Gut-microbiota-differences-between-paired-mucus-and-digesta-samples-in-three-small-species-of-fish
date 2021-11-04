@@ -15,10 +15,10 @@ Here follows the pipeline used for processing and statistical analysis of data. 
 4. LULU (4_LULU.sh)
 - Removal of erroneous ASVs
 
-5. Decontamination, sorting and filtering (5_Filtering.sh)
+5. Decontamination, sorting and filtering (5_Filtering.R)
 - Decontamination and filtering of data
 
-6. Statistical analysis and visualization (6_Statistics_visualisation.sh)
+6. Statistical analysis and visualization (6_Statistics_visualisation.R)
 - Statistical analysis and visiulisation 
 
-7. HMSC modelling (7_HMSC.sh)
+7. HMSC modelling (7_HMSC.R)
