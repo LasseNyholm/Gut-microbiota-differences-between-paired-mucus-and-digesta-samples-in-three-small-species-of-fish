@@ -3,7 +3,7 @@
 Here follows the pipeline used for processing and statistical analysis of data. The different sub-pipelines are chronological ordered from 1-7. Step 1-5 originally included data that are not a part of the current study, but are important for DADA2 and decontaminations. This extra data can be supplied upon request, but for convenience we supply the reader with decontaminated tables (following decontamination protocol in Phyloseq_filtering.sh) found in the "Data" directory. 
 
 
-1. Demultiplexing and preprocessing (1_Demultiplexing_perprrocessing.sh)
+1. Demultiplexing and preprocessing (1_Demultiplexing_preprocessing.sh)
 - Raw sequences are demultiplexed based on unique tags, filtered and primers are trimmed
 
 2. DADA2 - seperate rounds of sequencing (2_DADA2.R)
@@ -15,10 +15,10 @@ Here follows the pipeline used for processing and statistical analysis of data. 
 4. LULU (4_LULU.sh)
 - Removal of erroneous ASVs
 
-5. Decontamination, sorting and filtering (5_Phyloseq_filtering.sh)
+5. Decontamination, sorting and filtering (5_Filtering.sh)
 - Decontamination and filtering of data
 
-6. Statistical analysis and visualization (6_Diversity_composition_plots.sh)
+6. Statistical analysis and visualization (6_Statistics_visualisation.sh)
 - Statistical analysis and visiulisation 
 
 7. HMSC modelling (7_HMSC.sh)
